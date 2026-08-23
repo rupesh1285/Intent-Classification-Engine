@@ -30,6 +30,8 @@ models/*
 !models/active_model.txt
 !models/intent_classifier.joblib
 !models/stack_meta.joblib
+!models/ARTIFACTS.md
+!models/ARTIFACT_MANIFEST.json
 *.pkl
 *.h5
 *.pt
