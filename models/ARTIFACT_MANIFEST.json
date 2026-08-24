@@ -1,0 +1,46 @@
+{
+  "artifacts": [
+    {
+      "path": "data/clean/train.csv",
+      "ok": true,
+      "bytes": 7369852,
+      "sha256_prefix": "a781c7fa26928418"
+    },
+    {
+      "path": "data/clean/test.csv",
+      "ok": true,
+      "bytes": 1742536,
+      "sha256_prefix": "f4d0a0536283d07a"
+    },
+    {
+      "path": "models/intent_classifier.joblib",
+      "ok": true,
+      "bytes": 23835072,
+      "sha256_prefix": "689ddabea24a3996"
+    },
+    {
+      "path": "models/embedding_classifier.joblib",
+      "ok": true,
+      "bytes": 91792268,
+      "sha256_prefix": "c23263d25cdc3439"
+    },
+    {
+      "path": "models/stack_meta.joblib",
+      "ok": true,
+      "bytes": 1055,
+      "sha256_prefix": "e81f51da016ae47f"
+    },
+    {
+      "path": "models/distilbert/config.json",
+      "ok": true,
+      "bytes": 818,
+      "sha256_prefix": "c4d39a7cfba4c329"
+    },
+    {
+      "path": "models/distilbert/model.safetensors",
+      "ok": true,
+      "bytes": 267832560,
+      "sha256_prefix": "031eefee47ceb00e"
+    }
+  ]
+}
