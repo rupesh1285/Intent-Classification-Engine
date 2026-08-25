@@ -410,8 +410,26 @@ def _distil_vec(text: str) -> np.ndarray:
     return np.array([scores[c] for c in CLASSES])
 
 
+def stacking_ready() -> tuple[bool, str]:
+    if not STACK_META.exists():
+        return False, "stack_meta.joblib missing"
+    if not SKLEARN_PATH.exists():
+        return False, "intent_classifier.joblib missing"
+    if not EMB_PATH.exists():
+        return False, "embedding_classifier.joblib missing — see RESTORE.md"
+    bases = ["tfidf", "minilm"]
+    if STACK_CFG.exists():
+        bases = json.loads(STACK_CFG.read_text(encoding="utf-8")).get("bases", bases)
+    if "distilbert" in bases and not (DISTIL_DIR / "config.json").exists():
+        return False, "models/distilbert missing — see RESTORE.md"
+    return True, "ok"
+
+
 def predict_stacking(text: str):
     global _sklearn, _emb, _meta
+    ready, reason = stacking_ready()
+    if not ready:
+        raise FileNotFoundError(reason)
     if _sklearn is None:
         _sklearn = joblib.load(SKLEARN_PATH)
     if _emb is None:
