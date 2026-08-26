@@ -6,3 +6,5 @@
 - DistilBERT alone: ~0.911 acc (weights under `models/distilbert/`, gitignored — retrain or Colab export)
 - Colab GPU for 2 epochs: `notebooks/COLAB_DISTILBERT.md`
 - premium Gradio UI: `python -m app.demo` → http://127.0.0.1:7860
+
+- if embedding/DistilBERT weights missing: see RESTORE.md / scripts/restore_from_backup.ps1
