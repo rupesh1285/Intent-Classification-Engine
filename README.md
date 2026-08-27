@@ -74,3 +74,7 @@ Sources (`data/raw/SOURCE.md`): neuralchemy, deepset, Radda v2.
 ## License
 
 MIT
+
+## Local artifacts
+
+Heavy MiniLM/DistilBERT weights are gitignored. After clone, restore or retrain - see [RESTORE.md](RESTORE.md).
