@@ -25,3 +25,7 @@ Same clean split (`train.csv` / `test.csv`, seed 42).
 3. Soft-vote + OOF stacking  
 4. Fine-tune DistilBERT, then stack all three (best)  
 5. Error analysis + threshold tradeoffs + Gradio demo  
+
+## Local weights
+
+DistilBERT + MiniLM joblib stay local (size). Use RESTORE.md if they disappear after a clean checkout.
