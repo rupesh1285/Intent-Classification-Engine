@@ -26,3 +26,11 @@ Default backup: `%TEMP%\ice-final-snap` (created during history rebuild).
 ```
 
 Active model should stay `stacking` when all three bases are present.
+
+## Checklist
+
+- [ ] train.csv / test.csv present
+- [ ] embedding_classifier.joblib present
+- [ ] models/distilbert/config.json present
+- [ ] python -m scripts.verify_artifacts passes
+- [ ] demo classify works on sample prompts
