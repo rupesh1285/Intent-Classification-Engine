@@ -1,4 +1,4 @@
-"""Verify local gitignored artifacts needed for stacking demo."""
+﻿"""Verify local gitignored artifacts needed for stacking demo."""
 
 from __future__ import annotations
 
@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def sha256_file(path: Path, limit_mb: float | None = 8.0) -> str:
-    """Hash whole file, or first limit_mb for very large weights (fast check)."""
+    """Hash whole file, or first limit_mb for very large weights (fast integrity check)."""
     h = hashlib.sha256()
     max_bytes = None if limit_mb is None else int(limit_mb * 1024 * 1024)
     with path.open("rb") as f:
@@ -51,9 +51,10 @@ def main() -> None:
     out.write_text(json.dumps({"artifacts": rows}, indent=2), encoding="utf-8")
     print("wrote", out)
     if missing:
-        raise SystemExit(f"missing {len(missing)} artifacts — see RESTORE.md")
+        raise SystemExit(f"missing {len(missing)} artifacts â€” see RESTORE.md")
     print("all stacking artifacts present")
 
 
 if __name__ == "__main__":
     main()
+
