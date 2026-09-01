@@ -16,3 +16,5 @@ Generate/update checksums:
 ```
 
 This writes `models/ARTIFACT_MANIFEST.json`.
+
+After restore, keep this folder tracked manifest in sync with verify_artifacts.
