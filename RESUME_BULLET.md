@@ -4,3 +4,5 @@ Intent Classification Engine — prompt-injection vs benign classifier. Messy→
 https://github.com/rupesh1285/Intent-Classification-Engine
 
 Skills: Python, scikit-learn, sentence-transformers, Hugging Face transformers, stacking/ensembles, Gradio
+
+Note: DistilBERT/MiniLM weights kept local; restore via RESTORE.md after clone.
