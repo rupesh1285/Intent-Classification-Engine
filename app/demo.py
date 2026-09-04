@@ -1,4 +1,4 @@
-"""Gradio UI — premium classifier surface for Intent Classification Engine."""
+﻿"""Gradio UI â€” premium classifier surface for Intent Classification Engine."""
 
 from __future__ import annotations
 
@@ -61,7 +61,7 @@ html, body, .gradio-container {
   padding: 0 1.25rem 3rem !important;
 }
 
-/* atmosphere — soft paper wash + fine grid */
+/* atmosphere â€” soft paper wash + fine grid */
 .gradio-container::before {
   content: "";
   position: fixed;
@@ -294,7 +294,7 @@ html, body, .gradio-container {
 .ice-foot a { color: var(--accent) !important; text-decoration: none !important; }
 .ice-foot a:hover { text-decoration: underline !important; }
 
-/* examples — quiet list, not pill cluster */
+/* examples â€” quiet list, not pill cluster */
 .ice-examples {
   margin-top: 1.35rem !important;
   animation: riseIn 0.8s ease 0.18s both;
@@ -344,7 +344,7 @@ def metrics_line() -> str:
         model = m.get("model", "")
         if acc is None:
             return ""
-        return f"Held-out test · accuracy {float(acc):.1%} · macro F1 {float(f1):.3f} · {model}"
+        return f"Held-out test Â· accuracy {float(acc):.1%} Â· macro F1 {float(f1):.3f} Â· {model}"
     except Exception:
         return ""
 
@@ -416,12 +416,12 @@ def stacking_ready() -> tuple[bool, str]:
     if not SKLEARN_PATH.exists():
         return False, "intent_classifier.joblib missing"
     if not EMB_PATH.exists():
-        return False, "embedding_classifier.joblib missing — see RESTORE.md"
+        return False, "embedding_classifier.joblib missing â€” see RESTORE.md"
     bases = ["tfidf", "minilm"]
     if STACK_CFG.exists():
         bases = json.loads(STACK_CFG.read_text(encoding="utf-8")).get("bases", bases)
     if "distilbert" in bases and not (DISTIL_DIR / "config.json").exists():
-        return False, "models/distilbert missing — see RESTORE.md"
+        return False, "models/distilbert missing â€” see RESTORE.md"
     return True, "ok"
 
 
@@ -482,7 +482,7 @@ def render_verdict(label: str, scores: dict, backend: str) -> str:
     return f"""
     <div class="ice-verdict {cls}">
       <p class="ice-verdict-label">{label}</p>
-      <p class="ice-verdict-sub">{meaning} · confidence {conf:.1%} · via {backend}</p>
+      <p class="ice-verdict-sub">{meaning} Â· confidence {conf:.1%} Â· via {backend}</p>
       <div class="ice-bars">{bars}</div>
     </div>
     """
@@ -507,7 +507,7 @@ def predict(text: str):
         else:
             label, scores, backend = predict_sklearn(cleaned)
     except Exception as exc:
-        return f'<div class="ice-verdict is-empty">Model error: {exc}</div>'
+        return f'<div class="ice-verdict is-empty">Model error: {exc}. If weights are missing, open RESTORE.md.</div>'
 
     return render_verdict(label, scores, backend)
 
@@ -553,10 +553,10 @@ def main():
             <header class="ice-hero">
               <h1 class="ice-brand">Intent Classification Engine</h1>
               <p class="ice-lede">
-                Classify prompts as benign or injection — built for prompt-injection
+                Classify prompts as benign or injection â€” built for prompt-injection
                 detection, not generic chat intent.
               </p>
-              <p class="ice-mode">Active model · <strong>{mode}</strong></p>
+              <p class="ice-mode">Active model Â· <strong>{mode}</strong></p>
             </header>
             """
         )
@@ -565,7 +565,7 @@ def main():
             inp = gr.Textbox(
                 lines=6,
                 label="Prompt",
-                placeholder="Paste a user prompt or jailbreak attempt…",
+                placeholder="Paste a user prompt or jailbreak attemptâ€¦",
                 elem_id="prompt-box",
                 show_label=True,
             )
@@ -584,7 +584,7 @@ def main():
                 examples_per_page=4,
             )
 
-        foot = stats or "Local Gradio demo · Intent Classification Engine"
+        foot = stats or "Local Gradio demo Â· Intent Classification Engine"
         gr.HTML(
             f"""
             <footer class="ice-foot">
@@ -609,3 +609,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
