@@ -34,3 +34,8 @@ Active model should stay `stacking` when all three bases are present.
 - [ ] models/distilbert/config.json present
 - [ ] python -m scripts.verify_artifacts passes
 - [ ] demo classify works on sample prompts
+
+## Expected sizes (approx)
+
+- embedding_classifier.joblib ~ 80-90 MB
+- distilbert/model.safetensors ~ 250-270 MB
