@@ -8,3 +8,5 @@
 - premium Gradio UI: `python -m app.demo` → http://127.0.0.1:7860
 
 - if embedding/DistilBERT weights missing: see RESTORE.md / scripts/restore_from_backup.ps1
+
+- local heavy models restored; verify with: python -m scripts.verify_artifacts
