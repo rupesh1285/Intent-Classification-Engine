@@ -1,0 +1,12 @@
+{
+  "bases": [
+    "tfidf",
+    "minilm",
+    "distilbert"
+  ],
+  "classes": [
+    "benign",
+    "injection"
+  ],
+  "cv": 3
+}
