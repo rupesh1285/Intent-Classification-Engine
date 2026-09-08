@@ -1,0 +1,7 @@
+{
+  "weight_tfidf": 0.7,
+  "classes": [
+    "benign",
+    "injection"
+  ]
+}

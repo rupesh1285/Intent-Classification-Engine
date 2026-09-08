@@ -1,0 +1,8 @@
+{
+  "macro_f1": 0.8901,
+  "weighted_f1": 0.8929,
+  "accuracy": 0.8933,
+  "n_test": 4996,
+  "model": "soft-vote TF-IDF(0.70) + MiniLM(0.30)",
+  "report": "              precision    recall  f1-score   support\n\n      benign       0.90      0.85      0.87      2128\n   injection       0.89      0.93      0.91      2868\n\n    accuracy                           0.89      4996\n   macro avg       0.89      0.89      0.89      4996\nweighted avg       0.89      0.89      0.89      4996\n"
+}
