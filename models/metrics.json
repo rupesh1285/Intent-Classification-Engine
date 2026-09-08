@@ -1,6 +1,14 @@
-﻿{
-  "macro_f1": 0.885,
-  "weighted_f1": 0.888,
-  "accuracy": 0.8885,
-  "model": "word(1-3)+char(3-6) LinearSVC C=0.5 calibrated"
+{
+  "macro_f1": 0.9134,
+  "weighted_f1": 0.9156,
+  "accuracy": 0.9159,
+  "n_train": 19980,
+  "n_test": 4996,
+  "model": "stacking meta-LogReg on tfidf+minilm+distilbert (OOF cv=3)",
+  "bases": [
+    "tfidf",
+    "minilm",
+    "distilbert"
+  ],
+  "report": "              precision    recall  f1-score   support\n\n      benign       0.92      0.87      0.90      2128\n   injection       0.91      0.95      0.93      2868\n\n    accuracy                           0.92      4996\n   macro avg       0.92      0.91      0.91      4996\nweighted avg       0.92      0.92      0.92      4996\n"
 }
