@@ -1,0 +1,57 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# Env / secrets
+.env
+.env.*
+
+# Data dumps (keep docs + structure)
+data/raw/*
+!data/raw/.gitkeep
+!data/raw/SOURCE.md
+data/clean/*
+!data/clean/.gitkeep
+
+# Models: ship sklearn artifact + metrics; ignore other heavy formats
+models/*
+!models/.gitkeep
+!models/metrics.json
+!models/embedding_metrics.json
+!models/ensemble_metrics.json
+!models/ensemble_config.json
+!models/stacking_metrics.json
+!models/stacking_config.json
+!models/distilbert_metrics.json
+!models/active_model.txt
+!models/intent_classifier.joblib
+!models/stack_meta.joblib
+*.pkl
+*.h5
+*.pt
+*.onnx
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# local huggingface cache (do not commit)
+.hf_home/
+.hf_cache/
+
+# reports: keep narrative + plots; ignore raw dumps
+reports/errors.csv
+reports/error_summary.json
+
+# distilbert training checkpoints / weights (large)
+models/distilbert/
+
