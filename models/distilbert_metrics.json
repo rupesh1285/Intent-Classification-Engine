@@ -1,0 +1,9 @@
+{
+  "macro_f1": 0.9079,
+  "weighted_f1": 0.9105,
+  "accuracy": 0.9111,
+  "n_train": 19980,
+  "n_test": 4996,
+  "model": "distilbert-base-uncased fine-tuned (1.0 epochs)",
+  "report": "              precision    recall  f1-score   support\n\n      benign       0.94      0.85      0.89      2128\n   injection       0.90      0.96      0.93      2868\n\n    accuracy                           0.91      4996\n   macro avg       0.92      0.90      0.91      4996\nweighted avg       0.91      0.91      0.91      4996\n"
+}
