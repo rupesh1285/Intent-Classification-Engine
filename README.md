@@ -71,10 +71,14 @@ Demo (premium Gradio UI): http://127.0.0.1:7860
 
 Sources (`data/raw/SOURCE.md`): neuralchemy, deepset, Radda v2.
 
-## License
+## Deploy (Hugging Face Spaces)
 
-MIT
+Package ready in `deploy/hf-space/`. Steps: [DEPLOY_HF.md](DEPLOY_HF.md).
 
 ## Local artifacts
 
 Heavy MiniLM/DistilBERT weights are gitignored. After clone, restore or retrain - see [RESTORE.md](RESTORE.md).
+
+## License
+
+MIT

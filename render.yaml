@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: intent-classification-engine
+    runtime: python
+    plan: free
+    rootDir: deploy/hf-space
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.0"
+      - key: GRADIO_SERVER_NAME
+        value: "0.0.0.0"
+      - key: GRADIO_SERVER_PORT
+        value: "10000"
